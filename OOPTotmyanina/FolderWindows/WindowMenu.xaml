@@ -1,0 +1,55 @@
+﻿<Window x:Class="OOPTotmyanina.FolderWindows.WindowMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOPTotmyanina.FolderWindows"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Меню администратора" Height="450" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="imLogo" Grid.Column="1"
+               Grid.Row="1"
+               Style="{DynamicResource ImLogo}"/>
+        <Label x:Name="lblLogo"
+               Style="{DynamicResource LabelLogoStyle}"
+               Grid.Column="2" 
+               Grid.Row="1"
+               Content="Меню администратора"/>
+        <Label x:Name="lblFIO"
+               Content="Вы зашли под -"
+               Grid.Column="1"
+               Grid.Row="2"
+               Grid.ColumnSpan="2"
+               Style="{DynamicResource LabelStyle}"
+               HorizontalContentAlignment="Center"/>
+        <Menu x:Name="miMenu" Grid.Row="3" Grid.Column="1"
+                  Grid.ColumnSpan="2">
+            <MenuItem x:Name="miFile" Header="Файл" Width="100">
+                <MenuItem x:Name="miBack" Header="Назад" Click="miBack_Click"/>
+                <MenuItem x:Name="miExit" Header="Выход" Click="miExit_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="miList" Header="Списки" Width="100">
+                <MenuItem x:Name="miListStaff" Header="Список сотрудников" Click="miListStaff_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="miAdd" Header="Добавить" Width="100">
+                <MenuItem x:Name="miAddStaff" Header="Добавить сотрудника"/>
+            </MenuItem>
+        </Menu>
+
+
+    </Grid>
+</Window>
